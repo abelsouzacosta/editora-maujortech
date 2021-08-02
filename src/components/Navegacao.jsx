@@ -9,27 +9,27 @@ const Navegacao = () => {
   return (
     <ul>
       <li>
-        <Link exact activeStyle={linkCorrente}>
+        <Link exact activeStyle={linkCorrente} to="/">
           Home
         </Link>
       </li>
       <li>
-        <Link exact activeStyle={linkCorrente}>
+        <Link exact activeStyle={linkCorrente} to="/frontend">
           Frontend
         </Link>
       </li>
       <li>
-        <Link exact activeStyle={linkCorrente}>
+        <Link exact activeStyle={linkCorrente} to="/programacao">
           Programação
         </Link>
       </li>
       <li>
-        <Link exact activeStyle={linkCorrente}>
+        <Link exact activeStyle={linkCorrente} to="/design">
           Design
         </Link>
       </li>
       <li>
-        <Link exact activeStyle={linkCorrente}>
+        <Link exact activeStyle={linkCorrente} to="/catalogo">
           Catálogo
         </Link>
       </li>

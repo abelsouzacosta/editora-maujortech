@@ -1,14 +1,14 @@
 import React from "react";
 
-const Home = () => {
+const Design = () => {
   return (
     <main className="principal">
-      <h2>Últimos lançamentos</h2>
+      <h2>Categoria design</h2>
       <div className="card">
-        <p>Conteúdos da Home Page</p>
+        <p>Conteúdos da página de design</p>
       </div>
     </main>
   );
 };
 
-export default Home;
+export default Design;
