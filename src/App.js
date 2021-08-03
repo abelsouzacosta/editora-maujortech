@@ -15,20 +15,22 @@ class App extends Component {
     livros: [],
   };
 
-  async componentDidMount() {
-    try {
-      const { data: livros } = await axios.get("/api/todosOsLivros.json");
-      this.setState({ livros });
-    } catch (error) {
-      console.log(error);
-      document
-        .querySelectorAll(".principal")[0]
-        .insertAdjacentHTML("beforeend", "<p class='erro'>Houve um erro</p>");
-    }
+  componentDidMount() {
+    fetch("/api/todosOsLivros.json")
+      .then((response) => response.json())
+      .then((livros) => this.setState({ livros }))
+      .catch(function (error) {
+        document
+          .querySelectorAll("main")[0]
+          .insertAdjacentHTML(
+            "beforeend",
+            "<p class='alerta'>houve um erro</p>"
+          );
+      })
+      .finally(() => console.log(`Componente Carregado`));
   }
 
   render() {
-    console.log(this.state.livros);
     return (
       <Router>
         <>
