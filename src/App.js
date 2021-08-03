@@ -28,17 +28,22 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.livros);
     return (
       <Router>
         <>
           <Topo />
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/frontend" component={Frontend} />
-            <Route exact path="/programacao" component={Programacao} />
-            <Route exact path="/design" component={Design} />
-            <Route exact path="/catalogo" component={Catalogo} />
-            <Route component={NotFound} />
+            <Route
+              exact
+              path="/"
+              render={() => <Home livros={this.state.livros} />}
+            />
+            <Route exact path="/frontend" render={Frontend} />
+            <Route exact path="/programacao" render={Programacao} />
+            <Route exact path="/design" render={Design} />
+            <Route exact path="/catalogo" render={Catalogo} />
+            <Route render={NotFound} />
           </Switch>
           <Rodape />
         </>
