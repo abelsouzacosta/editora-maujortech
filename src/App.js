@@ -44,7 +44,11 @@ class App extends Component {
               path="/frontend"
               render={() => <Frontend livros={this.state.livros} />}
             />
-            <Route exact path="/programacao" render={Programacao} />
+            <Route
+              exact
+              path="/programacao"
+              render={() => <Programacao livros={this.state.livros} />}
+            />
             <Route exact path="/design" render={Design} />
             <Route
               exact
