@@ -39,7 +39,7 @@ class App extends Component {
               path="/"
               render={() => <Home livros={this.state.livros} />}
             />
-            <Route exact path="/frontend" render={Frontend} />
+            <Route exact path="/frontend" render={() => <Frontend />} />
             <Route exact path="/programacao" render={Programacao} />
             <Route exact path="/design" render={Design} />
             <Route exact path="/catalogo" render={Catalogo} />
